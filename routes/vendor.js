@@ -5,14 +5,15 @@ const vendor = require("../models/vendor");
 
 
 const router = express.Router();
-router.get('/save/vendor',(req,res)=>{
+router.post('/save/vendor',(req,res)=>{
     vendorController.saveVendor(req,res);
 })
 
-router.get('/vendor-registration',(req,res)=>{
+router.get('/vendor-portal',(req,res)=>{
     res.render('vendor-portal')
 })
-router.post('/saveVendor',(req,res)=>{
-    vendorController.saveVendor(req,res);
+router.get('/vendor-registration',(req,res)=>{
+    res.render('vendor-registration')
 })
+
 module.exports=router;
